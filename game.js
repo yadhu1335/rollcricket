@@ -3,6 +3,10 @@
 // let batorbowl=""
 // let youare = "bowling";
 
+// let youare2 = getyouare();
+
+console.log("YOUARE=" + youare);
+
 let bat = youare == "bat" ? true : false;
 let bowl = bat == true ? false : true;
 
@@ -148,6 +152,8 @@ function play(val) {
           document.querySelectorAll(".game-button").forEach((button) => {
             button.disabled = true;
           });
+          document.getElementById("playagain").disabled = false;
+
           // return;
         } else {
           if (score > int_val) {
@@ -168,6 +174,8 @@ function play(val) {
         document.querySelectorAll(".game-button").forEach((button) => {
           button.disabled = true;
         });
+        document.getElementById("playagain").disabled = false;
+
         // return;
       }
     }
@@ -203,6 +211,7 @@ function play(val) {
           document.querySelectorAll(".game-button").forEach((button) => {
             button.disabled = true;
           });
+          document.getElementById("playagain").disabled = false;
           // return;
         } else {
           if (score > int_val) {
@@ -220,11 +229,11 @@ function play(val) {
         alert("YOU WINN!!");
         console.log("score=" + score);
         document.getElementById("score").innerText = score;
-
         document.querySelectorAll(".game-button").forEach((button) => {
           button.disabled = true;
         });
         // return;
+        document.getElementById("playagain").disabled = false;
       }
     }
   }
